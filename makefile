@@ -1,4 +1,4 @@
-all: MathJax-node/sample-eqnum.html MathJax-node/sample-eqrefs.html MathJax-node/sample.html
+all: MathJax-node/sample-eqnum.html MathJax-node/sample-eqrefs.html MathJax-node/sample.html MathJax-node/sample-tex.html
 
 pandoc-markdown/%.md: MathJax-test/%.html
 	mkdir -p pandoc-markdown
