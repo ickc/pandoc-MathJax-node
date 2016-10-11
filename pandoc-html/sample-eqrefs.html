@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="a-test-of-equation-references">A test of Equation References</h1>
+<hr />
+<p>Here is a labeled equation: $$x+1\over\sqrt{1-x^2}\label{ref1}$$ with a reference to ref1: \ref{ref1}, and another numbered one with no label: $$x+1\over\sqrt{1-x^2}$$ This one uses \nonumber: $$x+1\over\sqrt{1-x^2}\nonumber$$</p>
+<hr />
+<p>Here's one using the equation environment: \begin{equation} x+1\over\sqrt{1-x^2} \end{equation} and one with equation* environment: \begin{equation*} x+1\over\sqrt{1-x^2} \end{equation*}</p>
+<hr />
+<p>This is a forward reference [\ref{ref2}] and another \eqref{ref2} for the following equation: $$x+1\over\sqrt{1-x^2}\label{ref2}$$ More math: $$x+1\over\sqrt{1-x^2}$$ Here is a ref inside math: \(\ref{ref2}+1\) and text after it. \begin{align} x&amp; = y_1-y_2+y_3-y_5+y_8-\dots &amp;&amp; \text{by \eqref{ref1}}\\ &amp; = y'\circ y^* &amp;&amp; \text{(by \eqref{ref3})}\\ &amp; = y(0) y' &amp;&amp; \text {by Axiom 1.} \end{align} Here's a bad ref [\ref{ref4}] to a nonexistent label.</p>
+<hr />
+<p>An alignment: \begin{align} a&amp;=b\label{ref3}\cr &amp;=c+d \end{align} and a starred one: \begin{align*} a&amp;=b\cr &amp;=c+d \end{align*}</p>
+</body>
+</html>
