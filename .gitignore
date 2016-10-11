@@ -1,0 +1,6 @@
+# macOS files
+.DS_Store
+
+pandoc-markdown/
+pandoc-html/
+MathJax-node/

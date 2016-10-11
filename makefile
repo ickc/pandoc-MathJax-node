@@ -1,4 +1,9 @@
-all: MathJax-node/sample-eqnum.html MathJax-node/sample-eqrefs.html MathJax-node/sample.html MathJax-node/sample-tex.html
+original := $(wildcard MathJax-test/*.html)
+pandocMD := $(patsubst MathJax-test/%.html,pandoc-markdown/%.md,$(original))
+pandocHTML := $(patsubst MathJax-test/%.html,pandoc-html/%.html,$(original))
+mathjaxOutput := $(patsubst MathJax-test/%.html,MathJax-node/%.html,$(original))
+
+all: $(mathjaxOutput) $(pandocHTML) $(pandocMD)
 
 pandoc-markdown/%.md: MathJax-test/%.html
 	mkdir -p pandoc-markdown
@@ -11,3 +16,6 @@ pandoc-html/%.html: pandoc-markdown/%.md
 MathJax-node/%.html: pandoc-html/%.html
 	mkdir -p MathJax-node
 	page2html --eqno=AMS < $< > $@
+
+clean:
+	rm -f $(mathjaxOutput) $(pandocHTML) $(pandocMD)
