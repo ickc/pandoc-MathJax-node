@@ -17,3 +17,13 @@ export PATH="/usr/local/lib/node_modules/mathjax-node/bin:$PATH"
 ```
 
 Also see `/usr/local/lib/node_modules/mathjax-node/batik/README.md` on how to install `batik` for `png` output.
+
+# Makefile
+
+Convert the MathJax HTML test files to a pseudo markdown file:
+
+```bash
+make -f makefile-pre
+```
+
+Then just `make` to produce all `mathjax-node` generated files.
