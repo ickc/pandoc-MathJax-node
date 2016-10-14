@@ -9,7 +9,8 @@ all: $(pandocHTML) $(mathjaxNodepage2html) $(mathjaxNodepage2mml) $(mathjaxNodep
 
 pandoc-html/%.html: pandoc-markdown/%.md
 	mkdir -p pandoc-html
-	pandoc -s -o $@ $<
+	pandoc --mathjax -s -o $@ $<
+	sed -i 's/<script.*script>//' $@
 
 MathJax-node-page2html/%.html: pandoc-html/%.html
 	mkdir -p MathJax-node-page2html
