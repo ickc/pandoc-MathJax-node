@@ -20,10 +20,6 @@ Also see `/usr/local/lib/node_modules/mathjax-node/batik/README.md` on how to in
 
 # Makefile
 
-Convert the MathJax HTML test files to a pseudo markdown file:
-
-```bash
-make -f makefile-pre
-```
+The MathJax HTML test files in `MathJax-test/` are manually converted to markdown files in `pandoc-markdown/`.
 
 Then just `make` to produce all `mathjax-node` generated files.

@@ -4,18 +4,46 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <title></title>
+  <title>MathJax Equation References</title>
   <style type="text/css">code{white-space: pre;}</style>
+  
 </head>
 <body>
+<div id="header">
+<h1 class="title">MathJax Equation References</h1>
+</div>
 <h1 id="a-test-of-equation-references">A test of Equation References</h1>
 <hr />
-<p>Here is a labeled equation: $$x+1\over\sqrt{1-x^2}\label{ref1}$$ with a reference to ref1: \ref{ref1}, and another numbered one with no label: $$x+1\over\sqrt{1-x^2}$$ This one uses \nonumber: $$x+1\over\sqrt{1-x^2}\nonumber$$</p>
+<p>Here is a labeled equation: <span class="math display">\[x+1\over\sqrt{1-x^2}\label{ref1}\]</span> with a reference to ref1: , and another numbered one with no label: <span class="math display">\[x+1\over\sqrt{1-x^2}\]</span></p>
+<p>This one uses \nonumber: <span class="math display">\[x+1\over\sqrt{1-x^2}\nonumber\]</span></p>
 <hr />
-<p>Here's one using the equation environment: \begin{equation} x+1\over\sqrt{1-x^2} \end{equation} and one with equation* environment: \begin{equation*} x+1\over\sqrt{1-x^2} \end{equation*}</p>
+Here's one using the equation environment:
+<span class="math display">\[\begin{equation}
+x+1\over\sqrt{1-x^2}
+\end{equation}\]</span>
+and one with equation* environment:
+<span class="math display">\[\begin{equation*}
+x+1\over\sqrt{1-x^2}
+\end{equation*}\]</span>
 <hr />
-<p>This is a forward reference [\ref{ref2}] and another \eqref{ref2} for the following equation: $$x+1\over\sqrt{1-x^2}\label{ref2}$$ More math: $$x+1\over\sqrt{1-x^2}$$ Here is a ref inside math: \(\ref{ref2}+1\) and text after it. \begin{align} x&amp; = y_1-y_2+y_3-y_5+y_8-\dots &amp;&amp; \text{by \eqref{ref1}}\\ &amp; = y'\circ y^* &amp;&amp; \text{(by \eqref{ref3})}\\ &amp; = y(0) y' &amp;&amp; \text {by Axiom 1.} \end{align} Here's a bad ref [\ref{ref4}] to a nonexistent label.</p>
+This is a forward reference [] and another  for the following equation: <span class="math display">\[x+1\over\sqrt{1-x^2}\label{ref2}\]</span> More math: <span class="math display">\[x+1\over\sqrt{1-x^2}\]</span> Here is a ref inside math: <span class="math inline">\(\ref{ref2}+1\)</span> and text after it.
+<span class="math display">\[\begin{align} 
+x&amp; = y_1-y_2+y_3-y_5+y_8-\dots 
+&amp;&amp; \text{by \eqref{ref1}}\\ 
+&amp; = y&#39;\circ y^* &amp;&amp; \text{(by \eqref{ref3})}\\ 
+&amp; = y(0) y&#39; &amp;&amp; \text {by Axiom 1.} 
+\end{align}\]</span>
+<p>Here's a bad ref [] to a nonexistent label.</p>
 <hr />
-<p>An alignment: \begin{align} a&amp;=b\label{ref3}\cr &amp;=c+d \end{align} and a starred one: \begin{align*} a&amp;=b\cr &amp;=c+d \end{align*}</p>
+An alignment:
+<span class="math display">\[\begin{align}
+a&amp;=b\label{ref3}\cr
+&amp;=c+d
+\end{align}\]</span>
+and a starred one:
+<span class="math display">\[\begin{align*}
+a&amp;=b\cr
+&amp;=c+d
+\end{align*}\]</span>
 </body>
 </html>
