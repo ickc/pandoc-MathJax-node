@@ -6,7 +6,7 @@
   <meta name="generator" content="pandoc" />
   <title>MathJax Equation References</title>
   <style type="text/css">code{white-space: pre;}</style>
-  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: {equationNumbers: { autoNumber: "AMS"},}});</script><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
 </head>
 <body>
 <div id="header">
@@ -17,7 +17,7 @@
 <p>Here is a labeled equation: <span class="math display">\[x+1\over\sqrt{1-x^2}\label{ref1}\]</span> with a reference to ref1: <span class="math inline">\(\ref{ref1}\)</span>, and another numbered one with no label: <span class="math display">\[x+1\over\sqrt{1-x^2}\]</span></p>
 <p>This one uses \nonumber: <span class="math display">\[x+1\over\sqrt{1-x^2}\nonumber\]</span></p>
 <hr />
-Here's one using the equation environment:
+Here’s one using the equation environment:
 <span class="math display">\[\begin{equation}
 x+1\over\sqrt{1-x^2}
 \end{equation}\]</span>
@@ -33,7 +33,7 @@ x&amp; = y_1-y_2+y_3-y_5+y_8-\dots
 &amp; = y&#39;\circ y^* &amp;&amp; \text{(by \eqref{ref3})}\\ 
 &amp; = y(0) y&#39; &amp;&amp; \text {by Axiom 1.} 
 \end{align}\]</span>
-<p>Here's a bad ref <span class="math inline">\(\ref{ref4}\)</span> to a nonexistent label.</p>
+<p>Here’s a bad ref <span class="math inline">\(\ref{ref4}\)</span> to a nonexistent label.</p>
 <hr />
 An alignment:
 <span class="math display">\[\begin{align}

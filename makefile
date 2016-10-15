@@ -9,7 +9,8 @@ all: $(pandocHTML) $(mathjaxNodepage2html) $(mathjaxNodepage2mml) $(mathjaxNodep
 
 pandoc-html/%.html: pandoc-markdown/%.md
 	mkdir -p pandoc-html
-	pandoc --mathjax -s -o $@ $<
+	pandoc --mathjax -S -s -o $@ $<
+	sed -i 's/<script/<script type="text\/x-mathjax-config">MathJax.Hub.Config({TeX: {equationNumbers: { autoNumber: "AMS"},}});<\/script><script/' $@
 
 MathJax-node-page2html/%.html: pandoc-html/%.html
 	mkdir -p MathJax-node-page2html
