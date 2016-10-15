@@ -1,5 +1,5 @@
 --
-title: MathJax   | TeX Samples
+title: MathJax---TeX Samples
 ...
 
 TeX Samples
