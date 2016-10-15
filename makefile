@@ -10,23 +10,22 @@ all: $(pandocHTML) $(mathjaxNodepage2html) $(mathjaxNodepage2mml) $(mathjaxNodep
 pandoc-html/%.html: pandoc-markdown/%.md
 	mkdir -p pandoc-html
 	pandoc --mathjax -s -o $@ $<
-	sed -i 's/<script.*script>//' $@
 
 MathJax-node-page2html/%.html: pandoc-html/%.html
 	mkdir -p MathJax-node-page2html
-	page2html --eqno=AMS < $< > $@
+	sed 's/<script.*script>//' $< | page2html --eqno=AMS > $@
 
 MathJax-node-page2mml/%.html: pandoc-html/%.html
 	mkdir -p MathJax-node-page2mml
-	page2mml --eqno=AMS < $< > $@
+	sed 's/<script.*script>//' $< | page2mml --eqno=AMS > $@
 
 # MathJax-node-page2png/%.html: pandoc-html/%.html
 # 	mkdir -p MathJax-node-page2png
-# 	page2png --eqno=AMS < $< > $@
+# 	sed 's/<script.*script>//' $< | page2png --eqno=AMS > $@
 
 MathJax-node-page2svg/%.html: pandoc-html/%.html
 	mkdir -p MathJax-node-page2svg
-	page2svg --eqno=AMS < $< > $@
+	sed 's/<script.*script>//' $< | page2svg --eqno=AMS > $@
 
 clean:
 	rm -f $(pandocHTML) $(mathjaxNodepage2html) $(mathjaxNodepage2mml) $(mathjaxNodepage2svg) #$(mathjaxNodepage2png)
