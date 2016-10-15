@@ -23,3 +23,12 @@ Also see `/usr/local/lib/node_modules/mathjax-node/batik/README.md` on how to in
 The MathJax HTML test files in `MathJax-test/` are manually converted to markdown files in `pandoc-markdown/`.
 
 Then just `make` to produce all `mathjax-node` generated files.
+
+# Note
+
+When manually converting from MathJax's test files to markdown, beware of the HTML `&...` characters:
+
+```bash
+find . -iname '*.md' -exec sed -i 's/\&amp;/\&/g' '{}' \;
+find . -iname '*.md' -exec sed -i 's/\&lt;/ < /g' '{}' \;
+```
