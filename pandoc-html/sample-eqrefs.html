@@ -14,19 +14,29 @@
 </div>
 <h1 id="a-test-of-equation-references">A test of Equation References</h1>
 <hr />
-<p>Here is a labeled equation: <span class="math display">\[x+1\over\sqrt{1-x^2}\label{ref1}\]</span> with a reference to ref1: <span class="math inline">\(\ref{ref1}\)</span>, and another numbered one with no label: <span class="math display">\[x+1\over\sqrt{1-x^2}\]</span></p>
+<p>Here is a labeled equation:</p>
+<span class="math display">\[\begin{equation}
+x+1\over\sqrt{1-x^2} \label{ref1}
+\end{equation}\]</span>
+<p>with a reference to ref1: <span class="math inline">\(\ref{ref1}\)</span> , and another numbered one with no label: <span class="math display">\[x+1\over\sqrt{1-x^2}\]</span></p>
 <p>This one uses \nonumber: <span class="math display">\[x+1\over\sqrt{1-x^2}\nonumber\]</span></p>
 <hr />
-Here’s one using the equation environment:
+<p>Here’s one using the equation environment:</p>
 <span class="math display">\[\begin{equation}
 x+1\over\sqrt{1-x^2}
 \end{equation}\]</span>
-and one with equation* environment:
+<p>and one with equation* environment:</p>
 <span class="math display">\[\begin{equation*}
 x+1\over\sqrt{1-x^2}
 \end{equation*}\]</span>
 <hr />
-This is a forward reference <span class="math inline">\(\ref{ref2}\)</span> and another <span class="math inline">\(\eqref{ref2}\)</span> for the following equation: <span class="math display">\[x+1\over\sqrt{1-x^2}\label{ref2}\]</span> More math: <span class="math display">\[x+1\over\sqrt{1-x^2}\]</span> Here is a ref inside math: <span class="math inline">\(\ref{ref2}+1\)</span> and text after it.
+<p>This is a forward reference <span class="math inline">\(\ref{ref2}\)</span> and another <span class="math inline">\(\eqref{ref2}\)</span> for the following equation:</p>
+<span class="math display">\[\begin{equation}
+x+1\over\sqrt{1-x^2}\label{ref2}
+\end{equation}\]</span>
+<p>More math:</p>
+<p><span class="math display">\[x+1\over\sqrt{1-x^2}\]</span></p>
+<p>Here is a ref inside math: <span class="math inline">\(\ref{ref2}+1\)</span> and text after it.</p>
 <span class="math display">\[\begin{align} 
 x&amp; = y_1-y_2+y_3-y_5+y_8-\dots 
 &amp;&amp; \text{by \eqref{ref1}}\\ 
@@ -35,12 +45,12 @@ x&amp; = y_1-y_2+y_3-y_5+y_8-\dots
 \end{align}\]</span>
 <p>Here’s a bad ref <span class="math inline">\(\ref{ref4}\)</span> to a nonexistent label.</p>
 <hr />
-An alignment:
+<p>An alignment:</p>
 <span class="math display">\[\begin{align}
 a&amp;=b\label{ref3}\cr
 &amp;=c+d
 \end{align}\]</span>
-and a starred one:
+<p>and a starred one:</p>
 <span class="math display">\[\begin{align*}
 a&amp;=b\cr
 &amp;=c+d
