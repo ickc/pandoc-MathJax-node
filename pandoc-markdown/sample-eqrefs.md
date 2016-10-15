@@ -8,7 +8,7 @@ A test of Equation References
 ------------------------------------------------------------------------
 
 Here is a labeled equation: $$x+1\over\sqrt{1-x^2}\label{ref1}$$
-with a reference to ref1: \ref{ref1}, and another numbered one with no
+with a reference to ref1: $\ref{ref1}$, and another numbered one with no
 label: $$x+1\over\sqrt{1-x^2}$$
 
 This one uses \\nonumber:
@@ -28,7 +28,7 @@ x+1\over\sqrt{1-x^2}
 
 ------------------------------------------------------------------------
 
-This is a forward reference \[\ref{ref2}\] and another \eqref{ref2}
+This is a forward reference $\ref{ref2}$ and another $\eqref{ref2}$
 for the following equation:
 $$x+1\over\sqrt{1-x^2}\label{ref2}$$
 More math:
@@ -41,7 +41,7 @@ x& = y_1-y_2+y_3-y_5+y_8-\dots
 & = y'\circ y^* && \text{(by \eqref{ref3})}\\ 
 & = y(0) y' && \text {by Axiom 1.} 
 \end{align} 
-Here's a bad ref \[\ref{ref4}\] to a
+Here's a bad ref $\ref{ref4}$ to a
 nonexistent label.
 
 ------------------------------------------------------------------------
