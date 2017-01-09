@@ -19,7 +19,15 @@ npm install pkra/mathjax-node-page
 
 The command to use `mjpage` with pandoc is in the makefile.
 
+If you want to make the project, use
+
+```bash
+make clean && make -j8
+```
+
 # Demo
+
+The followings are the demo, where the `mathjax` output is by the traditional MathJax rendered in browser, and the `mathjax-node-page` output by preprocessing the markdown with `mjpage`. You can compare the later to the former and see what isn't working yet (e.g. `\ref` might have problems).
 
 - <https://ickc.github.io/pandoc-MathJax-node/mathjax/sample-eqnum.html>
 - <https://ickc.github.io/pandoc-MathJax-node/mathjax/sample-eqrefs.html>
