@@ -17,7 +17,7 @@ npm install pkra/mathjax-node-page
 
 # Makefile
 
-The command to use `mjpage` with pandoc is in the makefile.
+The command to use `mjpage` with pandoc is in the makefile. Note that in normal use, you might want to pipe the commands used together.
 
 If you want to make the project, use
 
