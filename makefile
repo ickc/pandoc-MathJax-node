@@ -6,7 +6,6 @@ mathjaxHTML := $(patsubst source/%.md,docs/mathjax/%.html,$(pandocMD))
 DOCS := docs/index.md
 
 all: $(mathjaxHTML) $(mathjaxNodePageMD) $(mathjaxNodePageHTML) $(DOCS)
-docs: $(DOCS)
 
 # $(mathjaxNodePageMD): mathjax-node-page processed markdown
 mjpage/%.md: source/%.md
@@ -26,9 +25,9 @@ docs/mathjax/%.html: source/%.md
 	pandoc --mathjax -S -s -o $@ $<
 	sed -i 's/<script/<script type="text\/x-mathjax-config">MathJax.Hub.Config({TeX: {equationNumbers: { autoNumber: "AMS"},}});<\/script><script/' $@
 
-docs/index.md:
+docs/index.md: $(mathjaxHTML) $(mathjaxNodePageHTML)
 	printf "%s\n" "---" "..." "" > $@
-	find docs -iname '*.html' | sed 's/^docs\/\(.*\)$$/- <\1>/' >> $@
+	find docs -iname '*.html' | sed 's/^docs\/\(.*\)$$/- <https:\/\/ickc\.github\.io\/pandoc-MathJax-node\/\1>/' >> $@
 
 clean:
 	rm -f $(mathjaxHTML) $(mathjaxNodePageMD) $(mathjaxNodePageHTML) $(DOCS)

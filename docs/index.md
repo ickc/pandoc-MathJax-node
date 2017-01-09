@@ -1,7 +1,11 @@
 ---
 ...
 
-- <mathjax/sample-eqnum.html>
-- <mathjax/sample-eqrefs.html>
-- <mathjax/sample-tex.html>
-- <mathjax/sample.html>
+- <https://ickc.github.io/pandoc-MathJax-node/mathjax/sample-eqnum.html>
+- <https://ickc.github.io/pandoc-MathJax-node/mathjax/sample-eqrefs.html>
+- <https://ickc.github.io/pandoc-MathJax-node/mathjax/sample-tex.html>
+- <https://ickc.github.io/pandoc-MathJax-node/mathjax/sample.html>
+- <https://ickc.github.io/pandoc-MathJax-node/mathjax-node-page/sample-eqnum.html>
+- <https://ickc.github.io/pandoc-MathJax-node/mathjax-node-page/sample-eqrefs.html>
+- <https://ickc.github.io/pandoc-MathJax-node/mathjax-node-page/sample-tex.html>
+- <https://ickc.github.io/pandoc-MathJax-node/mathjax-node-page/sample.html>
