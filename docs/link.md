@@ -1,6 +1,4 @@
----
-...
-
+- <https://ickc.github.io/pandoc-MathJax-node/index.html>
 - <https://ickc.github.io/pandoc-MathJax-node/mathjax/sample-eqnum.html>
 - <https://ickc.github.io/pandoc-MathJax-node/mathjax/sample-eqrefs.html>
 - <https://ickc.github.io/pandoc-MathJax-node/mathjax/sample-tex.html>
