@@ -16,13 +16,13 @@ mjpage/%.md: source/%.md
 # $(mathjaxNodePageHTML): html from the mathjax-node-page processed markdown
 docs/mathjax-node-page/%.html: mjpage/%.md
 	mkdir -p docs/mathjax-node-page
-	pandoc -S -s -o $@ $<
+	pandoc -s -o $@ $<
 
 # $(mathjaxHTML):  html from the original markdown, using mathjax
 # This is the reference $(mathjaxNodePageHTML) should compare to
 docs/mathjax/%.html: source/%.md
 	mkdir -p docs/mathjax
-	pandoc --mathjax -S -s -o $@ $<
+	pandoc --mathjax -s -o $@ $<
 	sed -i 's/<script/<script type="text\/x-mathjax-config">MathJax.Hub.Config({TeX: {equationNumbers: { autoNumber: "AMS"},}});<\/script><script/' $@
 
 docs/link.md: $(mathjaxHTML) $(mathjaxNodePageHTML)
@@ -33,7 +33,7 @@ README.md: docs/README.md docs/link.md
 	cat $^ >> $@
 
 docs/index.html: README.md
-	pandoc -S -s -o $@ $<
+	pandoc -s -o $@ $<
 
 clean:
 	rm -f $(mathjaxHTML) $(mathjaxNodePageMD) $(mathjaxNodePageHTML) $(DOCS)
