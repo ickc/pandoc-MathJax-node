@@ -35,5 +35,5 @@ README.md: docs/README.md docs/link.md
 docs/index.html: README.md
 	pandoc -s -o $@ $<
 
-clean:
+Clean:
 	rm -f $(mathjaxHTML) $(mathjaxNodePageMD) $(mathjaxNodePageHTML) $(DOCS)
